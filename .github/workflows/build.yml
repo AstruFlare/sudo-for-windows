@@ -41,22 +41,22 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: sudo-for-windows-x64
-        path: release/x64
+        path: targets/x64
 
     - name: Upload Artifact x86
       uses: actions/upload-artifact@v3
       with:
         name: sudo-for-windows-x86
-        path: release/x86
+        path: targets/x86
 
     - name: Upload Artifact ARM64
       uses: actions/upload-artifact@v3
       with:
         name: sudo-for-windows-arm64
-        path: release/ARM64
+        path: targets/ARM64
 
     - name: Upload Artifact ARM
       uses: actions/upload-artifact@v3
       with:
         name: sudo-for-windows-arm
-        path: release/ARM
+        path: targets/ARM
