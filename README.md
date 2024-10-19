@@ -1,10 +1,8 @@
 # Sudo for Windows
 
-This software is licensed under the [MIT Lincense](LICENSE).
+This project is licensed under the [MIT Lincense](LICENSE).
 
-- **⚠ Warning: This software may have security vulnerabilities and should be used with caution.**
-
-[Latest release](https://github.com/sharedwonder/sudo-for-windows/releases/latest)
+- **⚠ Warning: The software may have security vulnerabilities and should be used with caution.**
 
 ## 1.Introducing
 
@@ -16,11 +14,11 @@ So I made this software. It can help us run commands as administrator without ha
 
 ## 2.Install
 
-First, download the compressed package of this software ([download the latest version](https://github.com/sharedwonder/sudo-for-windows/releases/latest)) and extract to a secure directory.
+First, [download a release package](https://github.com/AstruFlare/sudo-for-windows/releases/) and extract it.
 
 - ***SET FILE SYSTEM PERMISSIONS TO PREVENT STANDARD USERS FROM MODIFYING THESE FILES. OTHERWISE, STANDARD USERS WILL BE ABLE TO RUN ELEVATED PROCESSES!***
 
-Use this command to create the service for this software:
+Use the following command to create the service:
 
 ```powershell
 sc create SudoService type= own start= auto binPath= "<path-to-service-exe>" DisplayName= "Sudo for Windows Service"
@@ -42,7 +40,7 @@ Now, you can use `sudo` and `su` commands in Windows!
 
 ## 3.Uninstall
 
-Use this command to stop the service:
+Use the following command to stop the service:
 
 ```powershell
 sc stop SudoService
@@ -58,7 +56,7 @@ At last, remove the directory where the software is stored (don't forget to remo
 
 ## 4.Build
 
-Required environment:
+Required:
 
 - [Microsoft Visual Studio 2022](https://aka.ms/vs) or later *with Microsoft Visual C++ Build Tools v143 or later*
 - Microsoft Windows SDK 10.0 or later
@@ -66,7 +64,7 @@ Required environment:
 Commands:
 
 ```powershell
-git clone https://github.com/sharedwonder/sudo-for-windows.git
+git clone https://github.com/AstruFlare/sudo-for-windows.git
 cd sudo-for-windows
 msbuild "Sudo for Windows.sln" -p:Configuration=Release -p:Platform=<arch>
 ```
